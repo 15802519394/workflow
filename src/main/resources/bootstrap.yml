@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: microservice-zlst-metadata-170205
+#  cloud:
+#    config:
+#      name: zlst-metadata
+#      label: master
+#      profile: dev
+#      discovery:
+#        # 开启Config服务发现支持
+#        enabled: true
+#        # 此处需要设置成Config Server在Eureka上注册的服务名（serviceId的方式）# Eureka相关  client:
+#        service-id: microservice-config-server
+
+eureka:
+    instance:
+      prefer-ip-address: true
+    client:
+      service-url:
+#        defaultZone: http://eureka:8761/eureka
+        defaultZone: http://eureka.zlst.cloud.com/eureka
+
+
+# 注意：本例中的spring.application.name只能放在bootstrap.*文件中，不能放在application.*文件中，因为我们使用了自定义的logback-spring.xml。
+# 如果放在application.*文件中，自定义的logback文件将无法正确读取属性。
+# 详见：http://cloud.spring.io/spring-cloud-static/spring-cloud-

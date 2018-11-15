@@ -1,0 +1,27 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: utf-8
+  context-path: "/activiti-app"
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/activiti6ui?characterEncoding=UTF-8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  activiti:
+    jpa-enabled: false
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+#    properties:
+#        hibernate:
+#          cache:
+#            use_second_level_cache: false
+#  freemarker:
+#    check-template-location: false
+#liquibase:
+#  enabled: false
+#security:
+#  basic:
+#    enabled: false
