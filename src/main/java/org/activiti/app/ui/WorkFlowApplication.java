@@ -6,29 +6,27 @@ import org.activiti.app.servlet.AppDispatcherServletConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.SecurityAutoConfiguration;
-import org.springframework.boot.autoconfigure.security.SpringBootWebSecurityConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 //import org.springframework.boot.context.emery.EnableDiscoveryClient;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
-import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 //@EnableDiscoveryClient
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @Import({ApplicationConfiguration.class})
-public class DemoApplication extends SpringBootServletInitializer {
+public class WorkFlowApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(WorkFlowApplication.class, args);
 	}
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(DemoApplication.class);
+		return builder.sources(WorkFlowApplication.class);
 	}
 
 	/**
