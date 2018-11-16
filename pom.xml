@@ -105,7 +105,7 @@
 		<dependency>
 			<groupId>org.activiti</groupId>
 			<artifactId>activiti-app-conf</artifactId>
-			<version>6.0.0-boot2</version>
+			<version>zlst-activiti6.0.0-springboot1</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
